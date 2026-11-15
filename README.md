@@ -22,10 +22,11 @@ Java 后端出身，日常和 Spring、JVM 打交道，也写过 Python 爬虫�
 ### 常用工具
 
 ```text
-后端    Java · Spring Boot · JVM · MySQL · Redis · Elasticsearch · XXL-JOB
+后端    Java · Spring Boot · JVM
+数据    MySQL · Redis · Elasticsearch
 语言    Java · Python · TypeScript · SQL
-Agent   Pi · Claude Code · Codex · MCP · Agent Skills
-前端    Astro · React · Vue · Tailwind CSS
+Agent   Pi · Claude Code · Codex · MCP
+前端    Astro · React · Vue · Tailwind
 ```
 
 ### 写作
