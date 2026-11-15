@@ -19,7 +19,9 @@ Hi，我是 Zenty。正在学习，边做边记：折腾一些 AI 工具和小�
 
 ### 常用
 
-Java · Python · TypeScript · SQL · Astro · React · MySQL · Redis。最近多在写 Pi / Claude Code / Codex 相关的 Agent 小工具。
+Java · Python · TypeScript · SQL · Astro · React · MySQL · Redis。
+
+最近多在写 Pi / Claude Code / Codex 相关的 Agent 小工具。
 
 ### 找到我
 
