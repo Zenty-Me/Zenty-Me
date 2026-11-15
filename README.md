@@ -1,6 +1,6 @@
 <picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 640px)" srcset="https://raw.githubusercontent.com/Zenty-Me/Zenty-Me/main/assets/banner-dark-mobile.svg">
-  <source media="(prefers-color-scheme: light) and (max-width: 640px)" srcset="https://raw.githubusercontent.com/Zenty-Me/Zenty-Me/main/assets/banner-light-mobile.svg">
+  <source media="(prefers-color-scheme: dark) and (max-width: 1099px)" srcset="https://raw.githubusercontent.com/Zenty-Me/Zenty-Me/main/assets/banner-dark-mobile.svg">
+  <source media="(prefers-color-scheme: light) and (max-width: 1099px)" srcset="https://raw.githubusercontent.com/Zenty-Me/Zenty-Me/main/assets/banner-light-mobile.svg">
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Zenty-Me/Zenty-Me/main/assets/banner-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Zenty-Me/Zenty-Me/main/assets/banner-light.svg">
   <img alt="Zenty — Java 后端工程师，构建 AI Agent 工具链" src="https://raw.githubusercontent.com/Zenty-Me/Zenty-Me/main/assets/banner-light.svg" width="100%">
