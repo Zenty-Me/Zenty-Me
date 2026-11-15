@@ -161,9 +161,85 @@ function banner(p) {
 `;
 }
 
+
+// Compact banner for narrow viewports (GitHub mobile ≈ 360–420px wide).
+const MW = 640;
+const MH = 208;
+const MHUB = [552, 86];
+
+function bannerMobile(p) {
+  const spokes = SATS.map(
+    (_, i) => {
+      const a = (-90 + i * 60) * (Math.PI / 180);
+      const x = Math.round(MHUB[0] + 48 * Math.cos(a));
+      const y = Math.round(MHUB[1] + 48 * Math.sin(a));
+      return `<path class="edge" d="M${MHUB[0]} ${MHUB[1]} L${x} ${y}"/><circle class="dot" cx="${x}" cy="${y}" r="3.4"/>`;
+    },
+  ).join("\n    ");
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${MW} ${MH}" width="${MW}" height="${MH}" role="img" aria-label="Zenty — Java 后端工程师，构建 AI Agent 工具链">
+  <title>Zenty — Java 后端工程师，构建 AI Agent 工具链</title>
+  <defs>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="${p.blue}"/><stop offset="1" stop-color="${p.violet}"/>
+    </linearGradient>
+    <radialGradient id="glowBlue" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="${p.blue}" stop-opacity="${p.glowBlue}"/>
+      <stop offset="1" stop-color="${p.blue}" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowViolet" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="${p.violet}" stop-opacity="${p.glowViolet}"/>
+      <stop offset="1" stop-color="${p.violet}" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="reveal">
+      <rect class="reveal" x="24" y="${144 - 26}" width="326" height="44" fill="#fff"/>
+    </mask>
+  </defs>
+  <style>
+    .wordmark { font: 800 34px/1 "Segoe UI", Inter, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif; letter-spacing: 7px; }
+    .desc { font: 400 19px/1.4 "Segoe UI", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif; }
+    .mono { font: 400 15px/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .edge { fill: none; stroke: ${p.edge}; stroke-width: 1.2; stroke-dasharray: 3 7; animation: flow 7s linear infinite; }
+    .dot { fill: ${p.node}; opacity: 0.92; }
+    .hub { fill: url(#accent); }
+    .hubGlow { fill: url(#glowViolet); }
+    .reveal { animation: reveal 2.1s steps(22, end) 0.4s both; }
+    .caret { animation: blink 1.1s steps(1, end) 2.6s infinite; }
+    @keyframes flow { to { stroke-dashoffset: -100; } }
+    @keyframes reveal { from { transform: translateX(-330px); } to { transform: translateX(0); } }
+    @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+  </style>
+
+  <rect width="${MW}" height="${MH}" fill="${p.bg}"/>
+  <ellipse cx="80" cy="220" rx="300" ry="180" fill="url(#glowBlue)"/>
+  <ellipse cx="600" cy="10" rx="260" ry="160" fill="url(#glowViolet)"/>
+  <rect x="0.5" y="0.5" width="${MW - 1}" height="${MH - 1}" rx="16" fill="none" stroke="${p.border}"/>
+
+  <rect x="24" y="24" width="48" height="48" rx="14" fill="url(#accent)" opacity="0.14"/>
+  <rect x="24" y="24" width="48" height="48" rx="14" fill="none" stroke="url(#accent)" stroke-opacity="0.7"/>
+  <text x="48" y="55" text-anchor="middle" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="24" font-weight="700" fill="url(#accent)">Z</text>
+
+  <text class="wordmark" x="88" y="59" fill="${p.name}">ZENTY</text>
+  <text class="desc" x="24" y="106" fill="${p.desc}">Java / Spring 后端 · AI Agent 工具链</text>
+  <text class="mono" x="24" y="144" fill="${p.mono}" textLength="300" lengthAdjust="spacing" mask="url(#reveal)">${TYPED}</text>
+  <rect class="caret" x="330" y="${144 - 13}" width="9" height="17" fill="${p.caret}"/>
+
+  <g>
+    <circle class="hubGlow" cx="${MHUB[0]}" cy="${MHUB[1]}" r="30"/>
+    ${spokes}
+    <circle class="hub" cx="${MHUB[0]}" cy="${MHUB[1]}" r="6.5"/>
+  </g>
+</svg>
+`;
+}
+
 mkdirSync(here, { recursive: true });
 for (const p of [dark, light]) {
-  const file = join(here, `banner-${p.mode}.svg`);
-  writeFileSync(file, banner(p), "utf8");
-  console.log("wrote", file);
+  for (const [name, svg] of [
+    [`banner-${p.mode}.svg`, banner(p)],
+    [`banner-${p.mode}-mobile.svg`, bannerMobile(p)],
+  ]) {
+    writeFileSync(join(here, name), svg, "utf8");
+    console.log("wrote", name);
+  }
 }
