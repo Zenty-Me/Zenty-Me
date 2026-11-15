@@ -6,8 +6,6 @@
   </picture>
 </p>
 
-Hi，我是 Zenty。正在学习，边做边记：折腾一些 AI 工具和小项目，把过程和踩过的坑写成笔记，慢慢积累。
-
 ### 在做的项目
 
 - **[pi-switch](https://github.com/Zenty-Me/pi-switch)** — 给 Pi 加一层按项目的 Skills / MCP 开关，聊需求给建议，确认就应用，配置能存成模板。
@@ -16,12 +14,6 @@ Hi，我是 Zenty。正在学习，边做边记：折腾一些 AI 工具和小�
 - **[modelmeter](https://github.com/Zenty-Me/modelmeter)** — 估算并对比 OpenAI / Anthropic / Gemini 的 API 花费。
 - **[PromptPilot](https://github.com/Zenty-Me/PromptPilot)** — 把提示词一键注入网页版 AI 的 Chrome 扩展。
 - **[轻衣橱](https://github.com/Zenty-Me/qing-yichu)** — 本地优先的电子衣橱 PWA，数据只留在手机上。
-
-### 常用
-
-Java · Python · TypeScript · SQL · Astro · React · MySQL · Redis。
-
-最近多在写 Pi / Claude Code / Codex 相关的 Agent 小工具。
 
 ### 找到我
 
