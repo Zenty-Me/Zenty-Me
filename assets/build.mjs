@@ -65,7 +65,7 @@ const SATS = ["MCP", "SKILLS", "CLI", "GIT", "TUI", "API"].map((label, i) => {
 });
 
 const TYPED = 'zenty --now "agent tooling"';
-const TYPED_W = 402;
+const TYPED_W = 318;
 const TYPED_X = 64;
 const TYPED_Y = 300;
 
@@ -192,7 +192,7 @@ function bannerMobile(p) {
       <stop offset="1" stop-color="${p.violet}" stop-opacity="0"/>
     </radialGradient>
     <mask id="reveal">
-      <rect class="reveal" x="24" y="${144 - 26}" width="326" height="44" fill="#fff"/>
+      <rect class="reveal" x="24" y="${144 - 26}" width="260" height="44" fill="#fff"/>
     </mask>
   </defs>
   <style>
@@ -221,8 +221,8 @@ function bannerMobile(p) {
 
   <text class="wordmark" x="88" y="59" fill="${p.name}">ZENTY</text>
   <text class="desc" x="24" y="106" fill="${p.desc}">Java / Spring 后端 · AI Agent 工具链</text>
-  <text class="mono" x="24" y="144" fill="${p.mono}" textLength="300" lengthAdjust="spacing" mask="url(#reveal)">${TYPED}</text>
-  <rect class="caret" x="330" y="${144 - 13}" width="9" height="17" fill="${p.caret}"/>
+  <text class="mono" x="24" y="144" fill="${p.mono}" textLength="240" lengthAdjust="spacing" mask="url(#reveal)">${TYPED}</text>
+  <rect class="caret" x="270" y="${144 - 13}" width="9" height="17" fill="${p.caret}"/>
 
   <g>
     <circle class="hubGlow" cx="${MHUB[0]}" cy="${MHUB[1]}" r="30"/>

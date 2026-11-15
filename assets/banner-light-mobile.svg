@@ -13,7 +13,7 @@
       <stop offset="1" stop-color="#8A4BF0" stop-opacity="0"/>
     </radialGradient>
     <mask id="reveal">
-      <rect class="reveal" x="24" y="118" width="326" height="44" fill="#fff"/>
+      <rect class="reveal" x="24" y="118" width="260" height="44" fill="#fff"/>
     </mask>
   </defs>
   <style>
@@ -42,8 +42,8 @@
 
   <text class="wordmark" x="88" y="59" fill="#101528">ZENTY</text>
   <text class="desc" x="24" y="106" fill="#38415A">Java / Spring 后端 · AI Agent 工具链</text>
-  <text class="mono" x="24" y="144" fill="#5D6784" textLength="300" lengthAdjust="spacing" mask="url(#reveal)">zenty --now "agent tooling"</text>
-  <rect class="caret" x="330" y="131" width="9" height="17" fill="#3B5BD9"/>
+  <text class="mono" x="24" y="144" fill="#5D6784" textLength="240" lengthAdjust="spacing" mask="url(#reveal)">zenty --now "agent tooling"</text>
+  <rect class="caret" x="270" y="131" width="9" height="17" fill="#3B5BD9"/>
 
   <g>
     <circle class="hubGlow" cx="552" cy="86" r="30"/>
