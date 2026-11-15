@@ -164,8 +164,8 @@ function banner(p) {
 
 // Compact banner for narrow viewports (GitHub mobile ≈ 360–420px wide).
 const MW = 640;
-const MH = 208;
-const MHUB = [552, 86];
+const MH = 220;
+const MHUB = [556, 92];
 
 function bannerMobile(p) {
   const spokes = SATS.map(
@@ -192,13 +192,13 @@ function bannerMobile(p) {
       <stop offset="1" stop-color="${p.violet}" stop-opacity="0"/>
     </radialGradient>
     <mask id="reveal">
-      <rect class="reveal" x="24" y="${144 - 26}" width="260" height="44" fill="#fff"/>
+      <rect class="reveal" x="24" y="${158 - 28}" width="292" height="48" fill="#fff"/>
     </mask>
   </defs>
   <style>
-    .wordmark { font: 800 34px/1 "Segoe UI", Inter, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif; letter-spacing: 7px; }
-    .desc { font: 400 19px/1.4 "Segoe UI", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif; }
-    .mono { font: 400 15px/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .wordmark { font: 800 40px/1 "Segoe UI", Inter, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif; letter-spacing: 8px; }
+    .desc { font: 400 22px/1.4 "Segoe UI", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif; }
+    .mono { font: 400 17px/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
     .edge { fill: none; stroke: ${p.edge}; stroke-width: 1.2; stroke-dasharray: 3 7; animation: flow 7s linear infinite; }
     .dot { fill: ${p.node}; opacity: 0.92; }
     .hub { fill: url(#accent); }
@@ -215,14 +215,14 @@ function bannerMobile(p) {
   <ellipse cx="600" cy="10" rx="260" ry="160" fill="url(#glowViolet)"/>
   <rect x="0.5" y="0.5" width="${MW - 1}" height="${MH - 1}" rx="16" fill="none" stroke="${p.border}"/>
 
-  <rect x="24" y="24" width="48" height="48" rx="14" fill="url(#accent)" opacity="0.14"/>
-  <rect x="24" y="24" width="48" height="48" rx="14" fill="none" stroke="url(#accent)" stroke-opacity="0.7"/>
-  <text x="48" y="55" text-anchor="middle" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="24" font-weight="700" fill="url(#accent)">Z</text>
+  <rect x="24" y="22" width="50" height="50" rx="15" fill="url(#accent)" opacity="0.14"/>
+  <rect x="24" y="22" width="50" height="50" rx="15" fill="none" stroke="url(#accent)" stroke-opacity="0.7"/>
+  <text x="49" y="54" text-anchor="middle" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="24" font-weight="700" fill="url(#accent)">Z</text>
 
-  <text class="wordmark" x="88" y="59" fill="${p.name}">ZENTY</text>
-  <text class="desc" x="24" y="106" fill="${p.desc}">Java / Spring 后端 · AI Agent 工具链</text>
-  <text class="mono" x="24" y="144" fill="${p.mono}" textLength="240" lengthAdjust="spacing" mask="url(#reveal)">${TYPED}</text>
-  <rect class="caret" x="270" y="${144 - 13}" width="9" height="17" fill="${p.caret}"/>
+  <text class="wordmark" x="90" y="60" fill="${p.name}">ZENTY</text>
+  <text class="desc" x="24" y="112" fill="${p.desc}">Java / Spring 后端 · AI Agent 工具链</text>
+  <text class="mono" x="24" y="158" fill="${p.mono}" textLength="272" lengthAdjust="spacing" mask="url(#reveal)">${TYPED}</text>
+  <rect class="caret" x="304" y="${158 - 14}" width="10" height="19" fill="${p.caret}"/>
 
   <g>
     <circle class="hubGlow" cx="${MHUB[0]}" cy="${MHUB[1]}" r="30"/>
