@@ -2,7 +2,7 @@
   <picture>
     <source media="(max-width: 640px)" srcset="assets/banner-mobile.webp" type="image/webp">
     <source srcset="assets/banner.webp" type="image/webp">
-    <img src="assets/banner.jpg" alt="Zenty — learning in public · ai tools · small projects · open source" width="100%">
+    <img src="assets/banner.jpg" alt="Zenty — build · learn · share · projects / tools / notes" width="100%">
   </picture>
 </p>
 
